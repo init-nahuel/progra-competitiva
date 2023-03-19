@@ -1,6 +1,6 @@
 # Programacion Competitiva
 
-El presente repositorio es una coleccion de los ejercicios de las tareas realizadas en el curso de Programacion Competitiva. Estos ejercicios se dividen por topicos.
+El presente repositorio es una coleccion de los ejercicios de las tareas realizadas en el curso de Programacion Competitiva con sus respectivas soluciones. Estos ejercicios se dividen por topicos.
 
 ## Introductorios
 
