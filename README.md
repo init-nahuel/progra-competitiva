@@ -4,6 +4,8 @@ El presente repositorio es una coleccion de los ejercicios de las tareas realiza
 
 ## Introductorios
 
+La editorial de los problemas mas complicados se encuentra [**aca**](/enunciados/facil/editorial_de_la_tarea_0.pdf).
+
 * [Sapo y Sepo aman las sandias](enunciados/facil/sapo_y_sepo.pdf): **[Solucion](/ejercicios/facil/sapo_y_sepo.cpp)**
 * [Emilia y el cerco](/enunciados/facil/emilia_y_el_cerco.pdf): **[Solucion](/ejercicios/facil/emilia_y_el_cerro.cpp)**
 * [Partido de Basquetbol](/enunciados/facil/partido_de_basquetbol.pdf): **[Solucion](/ejercicios/facil/partido_de_basquetbol.cpp)**
