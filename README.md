@@ -10,4 +10,4 @@ La editorial de los problemas mas complicados se encuentra [**aca**](/enunciados
 * [Emilia y el cerco](/enunciados/facil/emilia_y_el_cerco.pdf): **[Solucion](/ejercicios/facil/emilia_y_el_cerro.cpp)**
 * [Partido de Basquetbol](/enunciados/facil/partido_de_basquetbol.pdf): **[Solucion](/ejercicios/facil/partido_de_basquetbol.cpp)**
 * [Torres Bellisimas](/enunciados/facil/torres_bellisimas.pdf): **[Solucion](/ejercicios/facil/torres_bellisimas.cpp)**
-* [Aniquila al Monstruo](enunciados/facil/aniquila_al_mostruo.pdf): **[Solucion (Incompleta)](/ejercicios/facil/aniquila_al_mostruo.cpp)**
+* [Aniquila al Monstruo](enunciados/facil/aniquila_al_mostruo.pdf): **[Solucion (INCOMPLETA)](/ejercicios/facil/aniquila_al_mostruo.cpp)**
