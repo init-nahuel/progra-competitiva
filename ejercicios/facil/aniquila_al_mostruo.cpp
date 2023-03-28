@@ -14,8 +14,8 @@ void solve() {
     else {
         while (c_turns < m_turns) {
             for (int i=k; i>=0; i--) {
-                for (int j=0;j<=k; j++) {
-                    double new_hc = hc+j*a, new_dc = dc+i*w;
+                for (int j=0;j<=k-i; j++) {
+                    double new_hc = hc+j*a, new_dc = dc+i*w; // long long ?
                     c_turns = ceil(new_hc/dm);
                     m_turns = ceil(hm/new_dc);
                 }
