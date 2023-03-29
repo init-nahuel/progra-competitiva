@@ -3,17 +3,6 @@
 
 using namespace std;
 
-/*
-Una forma interesante es ordenar lexicograficamente los pares de departamentos
-pasados por el input, luego a la hora de trabajar con el string que representa la fila
-bastara con una pasada directa sin tener que ver si cambiar el segundo por el primero
-o tener el problema de agarrar un aux y tener que ver el primer y segundo elemento de la pair/tuple,
-pues si no se encuentra en el primer elemento lo descartamos, notar que esto conlleva igual a ver ambos elementos,
-sin embargo primero comparamos lexicograficamente ambos en la fila (aun cuando pueden no estar en los que se llevan bien)
-y luego bastaria con ver si ese par se encuentra en esta lista (tomando el menor lex y el restante como segundo elemento 
-de la tupla)
-*/
-
 vector<pair<string, string>> lexicographical_transform(vector<pair<string, string>> *pair_deps, int size) {
     for (int i=0; i<size; i++) {
         string str1 = (*pair_deps)[i].first, str2 = (*pair_deps)[i].second;
@@ -34,7 +23,7 @@ int friends(string str1, string str2, vector<pair<string, string>> pair_deps, in
 
 vector<string> solve(int s, int l, int n, vector<pair<string, string>> pair_deps, vector<string> *auxs_line) {
     pair_deps = lexicographical_transform(&pair_deps, l);
-    for (int i=n-2; i>=0; i++) {
+    for (int i=n-2; i>=0; i--) {
         string str1 = (*auxs_line)[i], str2 = (*auxs_line)[i+1];
         int j = i;
         while (friends(str2, str1, pair_deps, l) && j>=0) {
@@ -42,9 +31,6 @@ vector<string> solve(int s, int l, int n, vector<pair<string, string>> pair_deps
             str1 = (*auxs_line)[j-1], str2 = (*auxs_line)[j];
             j--;
         }
-        // if (friends(str2, str1, pair_deps, l)) {
-        //     (*auxs_line)[i] = str2; (*auxs_line)[i+1] = str1;
-        // }
     }
     return *auxs_line;
 }
