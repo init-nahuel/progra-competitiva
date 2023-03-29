@@ -1,17 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int solve(vector<int> line, int size) {
-    int max = 1; 
-    for (int i=0; i<size-1; i++) {
-        int val = line[i], next = line[i+1], j = i+1, pos_max = 0;
-        while (val != next && j<size) {
-            pos_max += 1; j++;
-            next = line[j];
+    int max = 1;
+    for (int i=0; i<size; i++) {
+        vector<int> sub_array = {line[i]};
+        int poss_max = 0;
+
+        for (int j=i+1; j<size; j++) {
+            int val = line[j];
+            if (find(sub_array.begin(), sub_array.end(), val) != sub_array.end()) break;
+            sub_array.push_back(val);
         }
-        if (pos_max > max) max = pos_max;
+
+        poss_max = sub_array.size();
+        if (poss_max > max) max = poss_max;
     }
 
     return max;
