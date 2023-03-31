@@ -56,7 +56,7 @@ int main() {
         auxs_line.push_back(aux);
     }
 
-    if (s==1 || l==0 || n==1) for (int i=0; i<n; i++) cout << auxs_line[i] << "\n";
+    if (s==1 || l==0 || n==1) for (int i=0; i<n; i++) cout << auxs_line[i] << "\n"; // TA MALO EN CASO DE QUE SEA L = 0
     else {
         vector<string> new_line = solve(s, l, n, pair_deps, &auxs_line);
         for (int i=0; i<n; i++) {
