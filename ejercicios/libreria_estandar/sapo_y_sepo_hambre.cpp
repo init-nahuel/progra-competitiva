@@ -1,27 +1,25 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
-// TLE: IMPROVE SOLUTION
+// TLE: Improve solution
 
 using namespace std;
 
 int solve(vector<int> line, int size) {
-    int max = 1;
+    int max = 0;
     for (int i=0; i<size; i++) {
-        vector<int> sub_array = {line[i]};
-        int poss_max = 0;
-
-        for (int j=i+1; j<size; j++) {
-            int val = line[j];
-            if (find(sub_array.begin(), sub_array.end(), val) != sub_array.end()) break;
-            sub_array.push_back(val);
+        set<int> my_set;
+        int j = i;
+        int candidate_max = 0;
+        while (j<size) {
+            int v = line[j];
+            if (my_set.count(v) == 0) {
+                my_set.insert(v); candidate_max += 1;
+            }
+            else break;
+            j++;
         }
-
-        poss_max = sub_array.size();
-        if (poss_max > max) max = poss_max;
+        if (candidate_max > max) max = candidate_max;
     }
-
     return max;
 }
 
