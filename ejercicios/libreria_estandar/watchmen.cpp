@@ -12,8 +12,8 @@ void solve() {
 
     for (int i=0; i<n; i++) {
         ll x, y;
-        pair<ll, ll> p;
         cin >> x >> y;
+        pair<ll, ll> p = {x, y};
         x_coord[x]++, y_coord[y]++; coords[p]++;
         
     }
@@ -25,7 +25,7 @@ void solve() {
         ans += (valor*(valor-1))/2;
     }
     for (auto [llave, valor]: coords) {
-        if (valor > 1) ans -= 1;
+        if (valor > 1) ans -= (valor*(valor-1))/2;
     }
 
     cout << ans << '\n';
