@@ -62,6 +62,8 @@ int main() {
     int n;
     while(cin >> n){ // terminará cuando llegue al EOF
         // procesar caso de prueba
+        if (to_string(n) == "EOF") break;
+
         vector<pair<int, int>> ops;
         for (int i=0; i<n; i++) {
             pair<int, int> p; cin >> p.first >> p.second;
@@ -76,7 +78,5 @@ int main() {
 
         ops.clear();
     }
-
-    cout << "EOF\n"; 
     return 0;
 }
