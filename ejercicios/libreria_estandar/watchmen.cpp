@@ -1,40 +1,37 @@
-#include <iostream>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
+typedef long long ll;
 
 void solve() {
     int n; cin >> n;
     int count = 0;
-    // map<pair<int, int>, int> x_coord, y_coord;
-    map<pair<int, int>, int> map_points;
+    ll ans = 0;
+    map<ll, ll> x_coord, y_coord;
+    map<pair<ll, ll>, ll> coords;
 
     for (int i=0; i<n; i++) {
-        int x, y;
+        ll x, y;
+        pair<ll, ll> p;
         cin >> x >> y;
-        pair<int, int> p1 = {x, 0}, p2 = {0, y};
-
-        if (map_points.find(p1) == map_points.end()) map_points[p1] = 0;
-        else map_points[p1] += 1;
-
-        if (map_points.find(p2) == map_points.end()) map_points[p2] = 0;
-        else map_points[p2] += 1;
-
-        // if (x_coord.find(x) == x_coord.end()) x_coord[x] = 0;
-        // else x_coord[x] +=1;
-
-        // if (y_coord.find(y) == y_coord.end()) y_coord[y] = 0;
-        // else y_coord[y] +=1;
+        x_coord[x]++, y_coord[y]++; coords[p]++;
+        
     }
 
-    for (auto it = map_points.begin(); it != map_points.end(); it++) count += it->second;
-    // for (auto it = x_coord.begin(); it != x_coord.end(); it++) count += it->second;
-    // for (auto it = y_coord.begin(); it != y_coord.end(); it++) count += it->second;
-    cout << count << '\n';
+    for (auto [llave, valor]: x_coord) {
+        ans += (valor*(valor-1))/2;
+    }
+    for (auto [llave, valor]: y_coord) {
+        ans += (valor*(valor-1))/2;
+    }
+    for (auto [llave, valor]: coords) {
+        if (valor > 1) ans -= 1;
+    }
+
+    cout << ans << '\n';
 }
 
 int main() {
-    // ios_base::sync_with_stdio(0); cin.tie(0);
     solve();
     return 0;
 }
