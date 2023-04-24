@@ -65,7 +65,7 @@ void bfs(int s, int n) {
     queue<int> Cola;
     dist[s] = 0;
     Cola.push(s);
-    while(!Cola.empty()) {
+    while (!Cola.empty()) {
         int u = Cola.front(); Cola.pop();
 
         for (int v: graph[u]) { // Por cada vecino de u
@@ -106,7 +106,7 @@ void dfs_iterativo(int s, vector<vector<int>> &graph, vector<int> &visited) {
     stack<int> Pila;
     Pila.push(s);  // Metemos a la pila el nodo inicial
 
-    while(!Pila.empty()) {
+    while (!Pila.empty()) {
         int u = Pila.top(); Pila.pop(); // Tomamos un nodo
         visited[u] = 1;  // lo marcamos como visitado
 
