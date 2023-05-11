@@ -21,3 +21,23 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](/e
 * [Watchmen](/enunciados/libreria_estandar/watchmen.pdf): [**Solucion**](/ejercicios/libreria_estandar/watchmen.cpp)
 * [Arreglo mínimo](/enunciados/libreria_estandar/arreglo_minimo.pdf): [**Solucion**](/ejercicios/libreria_estandar/arreglo_minimo.cpp)
 * [¡Adivina la estructura!](/enunciados/libreria_estandar/adivina_estructura.pdf): [**Solucion**](/ejercicios/libreria_estandar/adivina_estructura.cpp)
+
+## [Grafos I](./catedras/02_grafos_I.md)
+
+La editorial con hints para algunos de estos problemas se encuentra [**aca**](/enunciados/grafos_1/editorial.pdf).
+
+* [Florencia y los laberintos](./enunciados/grafos_1/florencia_laberintos.pdf)
+* [Sapo y Sepo en el espacio](./enunciados/grafos_1/sapo_sepo_espacio.pdf): [**Solucion**](./ejercicios/grafos_1/sapo_sepo_espacio.cpp)
+* [Puzzle de hielo](./enunciados/grafos_1/puzzle_hielo.pdf): [**Solucion**](./ejercicios/grafos_1/puzzle_hielo.cpp)
+* [Laberintuerca](./enunciados/grafos_1/laberintuerca.pdf)
+* [Caos en Ucursos](./enunciados/grafos_1/caos_ucursos.pdf)
+
+## Grafos II
+
+La editorial con hints para algunos de estos problemas se encuentra [**aca**](/enunciados/grafos_2/Editorial_Tarea_3.pdf).
+
+* [El Viaje](./enunciados/grafos_2/el_viaje.pdf)
+* [Dijkstra](./enunciados/grafos_2/dijkstra.pdf): [**Solucion**](./ejercicios/grafos_2/dijkstra.cpp)
+* [Jerarquia](./enunciados/grafos_2/jerarquia.pdf): [**Solucion**](./ejercicios/grafos_2/jerarquia.cpp)
+* [Camino mas Corto](./enunciados/grafos_2/camino_mas_corto.pdf): [**Solucion**](./ejercicios/grafos_2/jerarquia.cpp)
+* [Satelites de Comunicacion](./enunciados/grafos_2/satelites_comunicacion.pdf)
