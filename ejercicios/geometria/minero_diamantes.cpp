@@ -1,19 +1,13 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-typedef long double ld;
 
-ld get_min_energy(multiset<ld> m, multiset<ld> d, int size) {
-    ld energy = 0;
-    
+long double get_min_energy(vector<long long> m, vector<long long> d, int size) {
+    long double energy = 0;
+
     for (int i=0; i<size; i++) {
-        auto it_miner = m.begin();
-        auto it_diamond = d.begin();
-        
-        ld miner = *it_miner, diamond = *it_diamond;
-        energy += sqrtl(miner*miner + diamond*diamond);
-
-        m.erase(it_miner); d.erase(it_diamond);
+        long long miner = m[i], diamond = d[i];
+        energy += sqrtl(pow(miner, 2) + pow(diamond, 2));
     }
 
     return energy;
@@ -23,18 +17,19 @@ int main() {
     int t; cin >> t;
     while (t--) {
         int n; cin >> n;
-        multiset<ld> diamonds, miner;
+        vector<long long> diamonds, miner;
         for (int i=0; i<2*n; i++) {
-            ld x, y; cin >> x >> y;
+            long long x, y; cin >> x >> y;
             if (x == 0) {
-                miner.insert(y);
+                miner.push_back(abs(y));
             }
             else {
-                diamonds.insert(x);
+                diamonds.push_back(abs(x));
             }
         }
-        ld min_energy = get_min_energy(miner, diamonds, n);
-        cout << fixed << setprecision(9) << min_energy << "\n";
+        sort(diamonds.begin(), diamonds.end()); sort(miner.begin(), miner.end());
+        long double min_energy = get_min_energy(miner, diamonds, n);
+        cout << fixed << setprecision(11) << min_energy << "\n";
     }
 
     return 0;
