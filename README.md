@@ -41,3 +41,12 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](/e
 * [Jerarquia](./enunciados/grafos_2/jerarquia.pdf): [**Solucion**](./ejercicios/grafos_2/jerarquia.cpp)
 * [Camino mas Corto](./enunciados/grafos_2/camino_mas_corto.pdf): [**Solucion**](./ejercicios/grafos_2/jerarquia.cpp)
 * [Satelites de Comunicacion](./enunciados/grafos_2/satelites_comunicacion.pdf)
+
+## Geometria
+
+
+* [**Minero de Diamantes**](./enunciados/geometria/minero_diamantes.pdf): [**Solucion**](./ejercicios/geometria/minero_diamantes.cpp)
+* [**Geometrialandia**](./enunciados/geometria/geometrialandia.pdf)
+* [**Rectas estrelladas**](./enunciados/geometria/rectas_estrelladas.pdf)
+* [**Sapo no quiere nadar**](./enunciados/geometria/sapo_no_nadar.pdf)
+* [**Pastelito**](./enunciados/geometria/pastelito.pdf)
