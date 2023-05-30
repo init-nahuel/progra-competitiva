@@ -44,6 +44,7 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](/e
 
 ## Geometria
 
+La editorial con hints para algunos de estos problemas se encuentra [**aca**](./enunciados/geometria/Editorial_Tarea_4.pdf).
 
 * [**Minero de Diamantes**](./enunciados/geometria/minero_diamantes.pdf): [**Solucion**](./ejercicios/geometria/minero_diamantes.cpp)
 * [**Geometrialandia**](./enunciados/geometria/geometrialandia.pdf)
