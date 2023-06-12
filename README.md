@@ -51,3 +51,7 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](./
 * [**Rectas estrelladas**](./enunciados/geometria/rectas_estrelladas.pdf)
 * [**Sapo no quiere nadar**](./enunciados/geometria/sapo_no_nadar.pdf)
 * [**Pastelito**](./enunciados/geometria/pastelito.pdf)
+
+## Teoria de Numeros
+
+* Sapo y su Permutacion: [**Solucion**](./ejercicios/teoria_numeros/sapo_permutacion.cpp)
