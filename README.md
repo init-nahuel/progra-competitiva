@@ -54,4 +54,6 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](./
 
 ## Teoria de Numeros
 
+La editorial con hints para algunos de estos problemas se encuentra [**aca**](./enunciados/teoria_numeros/Editorial_Tarea_5.pdf).
+
 * Sapo y su Permutacion: [**Solucion**](./ejercicios/teoria_numeros/sapo_permutacion.cpp)
