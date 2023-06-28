@@ -24,7 +24,7 @@ int main() {
     int t; cin >> t;
     while (t--) {
         int n, k; cin >> n >> k;
-        if (n < 4) {
+        if (n < 4 || k > n) {
             cout << 0 << 0 << "\n";
             continue;
         }
