@@ -6,10 +6,9 @@ vector<int> modified_sieve(int n) {
     int counter = 0;
     for (int i=2; i<n; i++) {
         if (sieve[i]) continue;
-        counter += 1;
-        for (int j=2*i; j<n; j+=i) {
-            sieve[j] = counter;
-        }
+        int div_3 = i*i;
+        if (div_3 >= n) break;
+        sieve[div_3] = 1;
     }
 
     return sieve;
@@ -18,7 +17,7 @@ vector<int> modified_sieve(int n) {
 pair<int, int> solve(int n, int k) {
     vector<int> sieve = modified_sieve(n);
     
-    return make_pair(sieve[n-1], sieve[k+1]);
+    return make_pair(count(sieve.begin(), sieve.end(), 1), count(sieve.begin() + k + 1, sieve.end(), 1));
 }
 
 int main() {
