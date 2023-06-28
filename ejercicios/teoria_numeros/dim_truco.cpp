@@ -14,21 +14,21 @@ vector<int> modified_sieve(int n) {
     return sieve;
 }
 
-pair<int, int> solve(int n, int k) {
-    vector<int> sieve = modified_sieve(n);
+pair<int, int> solve(int n, int k, vector<int> sieve) {
     
-    return make_pair(count(sieve.begin(), sieve.end(), 1), count(sieve.begin() + k + 1, sieve.end(), 1));
+    return make_pair(count(sieve.begin(), sieve.begin()+n, 1), count(sieve.begin()+k+1, sieve.begin()+n, 1));
 }
 
 int main() {
     int t; cin >> t;
+    vector<int> sieve = modified_sieve(100000);
     while (t--) {
         int n, k; cin >> n >> k;
         if (n < 4 || k > n) {
             cout << 0 << 0 << "\n";
-            continue;
+            continue;   
         }
-        pair<int, int> ans = solve(n, k);
+        pair<int, int> ans = solve(n, k, sieve);
         cout << ans.first << " " << ans.second << "\n";
     }
     return 0;
