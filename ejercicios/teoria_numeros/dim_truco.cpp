@@ -1,37 +1,39 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-set<int> modified_sieve(int n) {
-    vector<int> sieve(n, 0);
-    set<int> divs_3;
+vector<int> modified_sieve(int n) {
+    vector<int> sieve(n+1, 0);
     int counter = 0;
-    for (int i=2; i<n; i++) {
+    for (int i=2; i<=n; i++) {
         if (sieve[i]) continue;
-        divs_3.insert(i*i);
-        for (int j=i; j<n; j+=i) {
-            sieve[j] = j;
+        counter +=  1;
+        for (int j=i*2; j<=n; j+=i) {
+            if (j >= i*i) {
+                sieve[j] = counter;
+                continue;
+            }
+            sieve[j] = i;
         }
     }
 
-    return divs_3;
+    return sieve;
 }
 
-pair<int, int> solve(int n, int k, set<int> sieve) {
-    int len_sieve = size(sieve);
-    auto it_n = sieve.lower_bound(n);
-    auto it_k = sieve.lower_bound(k);
-    int divs_3 = distance(sieve.begin(), it_n);
-    int great_k = distance(it_k, sieve.end());
-    return make_pair(divs_3, great_k);
+pair<int, int> solve(int n, int k, vector<int> &sieve) {
+    int sqrt_n = (int) floor(sqrt(n)), sqrt_k = (int) floor(sqrt(k));
+    int divs_3 = sieve[sqrt_n*sqrt_n];
+    int divs_great_k = divs_3 - sieve[sqrt_k*sqrt_k];
+    
+    return make_pair(divs_3, divs_great_k);
 }
 
 int main() {
     int t; cin >> t;
-    set<int> sieve = modified_sieve(100000);
+    vector<int> sieve = modified_sieve((int) 10e5);
     while (t--) {
         int n, k; cin >> n >> k;
         if (n < 4 || k > n) {
-            cout << 0 << 0 << "\n";
+            cout << 0 << " " << 0 << "\n";
             continue;   
         }
         pair<int, int> ans = solve(n, k, sieve);
