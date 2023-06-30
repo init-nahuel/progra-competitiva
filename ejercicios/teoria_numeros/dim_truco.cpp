@@ -21,32 +21,10 @@ vector<int> modified_sieve(int n) {
 
 pair<int, int> solve(int n, int k, vector<int> sieve) {
     int sqrt_n = (int) floor(sqrt(n)), sqrt_k = (int) floor(sqrt(k));
-    // int divs_3 = sieve[sqrt_n*sqrt_n];
-    // int divs_great_k = divs_3 - sieve[sqrt_k*sqrt_k];
-    int len = size(sieve);
-    int bin_n = binary_search(sieve, sqrt_n, 0, n);
-    int bin_k = binary_search(sieve, sqrt_k, 0, n);
-    
-    return make_pair(n - bin_n, bin_n - bin_k);
-}
+    auto divs_minor_n = lower_bound(sieve.begin(), sieve.end(), n, less_equal<int>());
+    auto divs_great_k = lower_bound(sieve.begin(), sieve.end(), k, less_equal<int>());
 
-int binary_search(vector<int> arr, int val, int l, int r) {
-    while (l <= r) {
-        int mid = (l+r)/2;
-        if (l == r) {
-            return l;
-        }
-        if (arr[mid] > val) {
-            r = mid;
-        }
-        else if (arr[mid] == val) {
-            return mid;
-        }
-        else {
-            l = mid;
-        }
-    }
-    return l;
+    return make_pair(divs_minor_n - sieve.begin(), divs_minor_n - divs_great_k);
 }
 
 int main() {
