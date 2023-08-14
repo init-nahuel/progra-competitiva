@@ -6,11 +6,11 @@ El presente repositorio es una coleccion de los ejercicios de las tareas realiza
 
 La editorial con hints para algunos de estos problemas se encuentra [**aca**](/enunciados/facil/editorial.pdf).
 
-* [Sapo y Sepo aman las sandias](enunciados/facil/sapo_y_sepo.pdf): **[Solucion](./ejercicios/introductorios/sapo_y_sepo.cpp)**
-* [Emilia y el cerco](/enunciados/facil/emilia_y_el_cerco.pdf): **[Solucion](./ejercicios/introductorios/emilia_y_el_cerro.cpp)**
-* [Partido de Basquetbol](/enunciados/facil/partido_de_basquetbol.pdf): **[Solucion](./ejercicios/introductorios/partido_de_basquetbol.cpp)**
-* [Torres Bellisimas](/enunciados/facil/torres_bellisimas.pdf): **[Solucion](./ejercicios/introductorios/torres_bellisimas.cpp)**
-* [Aniquila al Monstruo](enunciados/facil/aniquila_al_mostruo.pdf): **[Solucion (INCOMPLETA)](./ejercicios/introductorios/aniquila_al_mostruo.cpp)**
+* [Sapo y Sepo aman las sandias](./enunciados/introductorios/sapo_y_sepo.pdf): **[Solucion](./ejercicios/introductorios/sapo_y_sepo.cpp)**
+* [Emilia y el cerco](/enunciados/introductorios/emilia_y_el_cerco.pdf): **[Solucion](./ejercicios/introductorios/emilia_y_el_cerro.cpp)**
+* [Partido de Basquetbol](/enunciados/introductorios/partido_de_basquetbol.pdf): **[Solucion](./ejercicios/introductorios/partido_de_basquetbol.cpp)**
+* [Torres Bellisimas](/enunciados/introductorios/torres_bellisimas.pdf): **[Solucion](./ejercicios/introductorios/torres_bellisimas.cpp)**
+* [Aniquila al Monstruo](enunciados/introductorios/aniquila_al_mostruo.pdf): **[Solucion (INCOMPLETA)](./ejercicios/introductorios/aniquila_al_mostruo.cpp)**
 
 ## Libreria Estandar
 
