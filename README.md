@@ -12,6 +12,7 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](/e
 * [Torres Bellisimas](/enunciados/introductorios/torres_bellisimas.pdf): **[Solucion](./ejercicios/introductorios/torres_bellisimas.cpp)**
 * [Aniquila al Monstruo](enunciados/introductorios/aniquila_al_mostruo.pdf): **[Solucion (INCOMPLETA)](./ejercicios/introductorios/aniquila_al_mostruo.cpp)**
 * [Palabras en el papel](./enunciados/introductorios/palabras_en_papel.pdf): [**Solucion**](./ejercicios/introductorios/palabras_papel.cpp)
+* [Lagrimas de ayudantes](./enunciados/introductorios/lagrimas_ayudantes.pdf): [**Solucion**](./ejercicios/introductorios/lagrimas_ayudantes.cpp)
 
 ## Libreria Estandar
 
