@@ -1,21 +1,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool cmp(int n, pair<int, int>& p) {
+    return p.first > n;
+}
+
 int main() {
     int n, x; cin >> n >> x;
-    vector<int> arr(n);
-    int first = 0, second = 0;
-    int pos_first = 0, pos_second = 0;
-    for (int i=0; i<n; i++) {
-        if (first+second == x) {
-            cout << pos_first << " " << pos_second << "\n";
-        } 
-        int val; cin >> val;
-        arr[i] = val;
-        second = val
-        pos_first = val;
+    vector<pair<int, int>> arr;
 
+    for (int i=0; i<n; i++) {
+        int val; cin >> val;
+        arr.push_back({val, i+1});
     }
 
-    return 0;
+    sort(arr.begin(), arr.end());
+    auto l = arr.begin(), r = upper_bound(arr.begin(), arr.end(), x, cmp);
+
+    while (l < r) {
+        pair<int, int> pl = *l, pr = *r; 
+        if (pl.first + pr.first == x) {
+            cout << pl.second << " " << pr.second << "\n";
+            goto end;
+        }
+        else if (pl.first + pr.first > x) {
+            r--;
+        }
+        else if (pl.first + pr.first < x) {
+            l++;
+        }
+    }
+
+    cout << "IMPOSSIBLE\n";
+
+    end:
+        return 0;
 }
