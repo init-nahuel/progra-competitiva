@@ -23,6 +23,7 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](/e
 * [Watchmen](/enunciados/libreria_estandar/watchmen.pdf): [**Solucion**](/ejercicios/libreria_estandar/watchmen.cpp)
 * [Arreglo mínimo](/enunciados/libreria_estandar/arreglo_minimo.pdf): [**Solucion**](/ejercicios/libreria_estandar/arreglo_minimo.cpp)
 * [¡Adivina la estructura!](/enunciados/libreria_estandar/adivina_estructura.pdf): [**Solucion**](/ejercicios/libreria_estandar/adivina_estructura.cpp)
+* [Sumalos!](./enunciados/libreria_estandar/sumalos.pdf): [**Solucion**](./ejercicios/libreria_estandar/sumalo.cpp)
 
 ## [Grafos I](./catedras/02_grafos_I.md)
 
