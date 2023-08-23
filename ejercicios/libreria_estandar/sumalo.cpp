@@ -15,10 +15,11 @@ int main() {
     }
 
     sort(arr.begin(), arr.end());
-    auto l = arr.begin(), r = upper_bound(arr.begin(), arr.end(), x, cmp);
+    auto l = arr.begin();
+    auto r = upper_bound(arr.begin(), arr.end(), x, cmp) == arr.end() ? arr.end() - 1 : upper_bound(arr.begin(), arr.end(), x, cmp);
 
     while (l < r) {
-        pair<int, int> pl = *l, pr = *r; 
+        pair<int, int> pl = *l, pr = *r;
         if (pl.first + pr.first == x) {
             cout << pl.second << " " << pr.second << "\n";
             goto end;
