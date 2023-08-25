@@ -18,12 +18,14 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](/e
 
 La editorial con hints para algunos de estos problemas se encuentra [**aca**](/enunciados/libreria_estandar/editorial.pdf).
 
-* [Quiero mis UBs](/enunciados/libreria_estandar/quiero_mis_ubs.pdf):
-* [Sapo y Sepo tienen hambre](/enunciados/libreria_estandar/sapo_y_sepo_hambre.pdf):
+* [Quiero mis UBs](/enunciados/libreria_estandar/quiero_mis_ubs.pdf)
+* [Sapo y Sepo tienen hambre](/enunciados/libreria_estandar/sapo_y_sepo_hambre.pdf)
 * [Watchmen](/enunciados/libreria_estandar/watchmen.pdf): [**Solucion**](/ejercicios/libreria_estandar/watchmen.cpp)
 * [Arreglo mínimo](/enunciados/libreria_estandar/arreglo_minimo.pdf): [**Solucion**](/ejercicios/libreria_estandar/arreglo_minimo.cpp)
 * [¡Adivina la estructura!](/enunciados/libreria_estandar/adivina_estructura.pdf): [**Solucion**](/ejercicios/libreria_estandar/adivina_estructura.cpp)
 * [Sumalos!](./enunciados/libreria_estandar/sumalos.pdf): [**Solucion**](./ejercicios/libreria_estandar/sumalo.cpp)
+* [El juego de Glupert](./enunciados/libreria_estandar/juego_glupert.pdf): [**Solucion**](./ejercicios/libreria_estandar/gluper_game.cpp)
+* [Sapo en el MOP](./enunciados/libreria_estandar/sapo_mop.pdf)
 
 ## [Grafos I](./catedras/02_grafos_I.md)
 
