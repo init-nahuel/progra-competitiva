@@ -62,3 +62,7 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](./
 La editorial con hints para algunos de estos problemas se encuentra [**aca**](./enunciados/teoria_numeros/Editorial_Tarea_5.pdf).
 
 * Sapo y su Permutacion: [**Solucion**](./ejercicios/teoria_numeros/sapo_permutacion.cpp)
+
+## Programacion Dinamica
+
+- [**¿Camino o trampa?:**](./enunciados/programacion_dinamica/camino_trampa.pdf) [**Solucion**](./ejercicios/programacion_dinamica/camino_trampa.cpp)
