@@ -65,4 +65,5 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](./
 
 ## Programacion Dinamica
 
-- [**¿Camino o trampa?:**](./enunciados/programacion_dinamica/camino_trampa.pdf) [**Solucion**](./ejercicios/programacion_dinamica/camino_trampa.cpp)
+* [**¿Camino o trampa?:**](./enunciados/programacion_dinamica/camino_trampa.pdf) [**Solucion**](./ejercicios/programacion_dinamica/camino_trampa.cpp)
+* [**Entrenamiento Santiagino**](./enunciados/programacion_dinamica/entrenamiento_sgto.pdf) [**Solucion**](./ejercicios/programacion_dinamica/entrenamiento_stgo.cpp)
