@@ -36,11 +36,11 @@ struct segment_tree{
     tree[n] = merge(tree[2*n+1], tree[2*n+2]);
   }
 
-  int query(int l, int r){
+  ll query(int l, int r){
     return query(0, 0, N-1, l, r);
   }
 
-  int query(int n, int i, int j, int l, int r){
+  ll query(int n, int i, int j, int l, int r){
     // nodo actual mira intervalo [i,j]
     // queremos responder consulta [l,r]
     // caso 1: contenido totalmente
@@ -79,27 +79,27 @@ struct segment_tree{
 
 
 int main() {
-    fast;
+  fast;
 
-    int n, q;
-    cin >> n >> q;
-    vector<ll> nums(n);
+  int n, q;
+  cin >> n >> q;
+  vector<ll> nums(n);
 
-    for (int i=0; i<n; i++) {
-        cin >> nums[i];
-    }
+  for (int i=0; i<n; i++) {
+      cin >> nums[i];
+  }
 
-    segment_tree ST(nums);
+  segment_tree ST(nums);
 
-    for (int i=0; i<q; i++) {
-        int t, a, b;
-        cin >> t >> a >> b;
-        if (t == 1) {
-            ST.update(a-1, b);
-        } else {
-            cout << ST.query(a-1, b-1) << endl;
-        }
-    }
+  for (int i=0; i<q; i++) {
+      int t, a, b;
+      cin >> t >> a >> b;
+      if (t == 1) {
+          ST.update(a-1, b);
+      } else {
+          cout << ST.query(a-1, b-1) << endl;
+      }
+  }
 
-    return 0;
+  return 0;
 }
