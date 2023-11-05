@@ -7,7 +7,7 @@ using namespace std;
 struct segment_tree{
 
   int N;
-  vector <set<char>> tree;
+  vector <bitset<26>> tree;
   
   segment_tree(string &A){
     // constructor
@@ -16,17 +16,18 @@ struct segment_tree{
     build(0, 0, N-1, A);
   }
 
-  set<char> merge(set<char> a, set<char> b){
-    set<char> res;
-    set_union(a.begin(), a.end(), b.begin(), b.end(), inserter(res, res.begin()));
-    return res;
+  bitset<26> merge(bitset<26> a, bitset<26> b){
+    // set<char> res;
+    // set_union(a.begin(), a.end(), b.begin(), b.end(), inserter(res, res.begin()));
+    // a.insert(b.begin(), b.end());
+    return a | b;
   }
 
   void build(int n, int i, int j, string &A){
     // n: indice del nodo
     // nodo mira segmento [i,j]
     if(i == j){
-      tree[n].insert(A[i]);
+      tree[n][A[i]-'a'] = 1;
       return;
     }
     int mid = (i+j)/2;
@@ -37,11 +38,11 @@ struct segment_tree{
     tree[n] = merge(tree[2*n+1], tree[2*n+2]);
   }
 
-  set<char> query(int l, int r){
-    return query(0, 0, N-1, l, r);
+  int query(int l, int r){
+    return query(0, 0, N-1, l, r).count();
   }
 
-  set<char> query(int n, int i, int j, int l, int r){
+  bitset<26> query(int n, int i, int j, int l, int r){
     // nodo actual mira intervalo [i,j]
     // queremos responder consulta [l,r]
     // caso 1: contenido totalmente
@@ -50,7 +51,7 @@ struct segment_tree{
     }
     // caso 2: [i,j] está fuera de [l,r]
     if(j < l || r < i){
-      return {};
+      return bitset<26>();
     }
     // caso 3: contenido parcialmente
     int mid = (i+j)/2;
@@ -59,16 +60,18 @@ struct segment_tree{
 
   void update(int idx, char x){
     // A[idx] = x
-    update(0, 0, N-1, idx, x);
+    bitset<26> b;
+    b[x-'a'] = 1;
+    update(0, 0, N-1, idx, b);
   }
 
-  void update(int n, int i, int j, int idx, char x){
+  void update(int n, int i, int j, int idx, bitset<26> x){
     // no contiene a idx
     if(idx < i || idx > j){
       return;
     }
     if(i == j){
-      tree[n] = {x};
+      tree[n] = x;
       return;
     }
     int mid = (i+j)/2;
@@ -95,8 +98,8 @@ int main() {
         ST.update(a-1, b);
       } else {
         int a, b; cin >> a >> b;
-        set<char> ans = ST.query(a-1, b-1);
-        cout << ans.size() << endl;
+        int ans = ST.query(a-1, b-1);
+        cout << ans << endl;
       }
   }
 
