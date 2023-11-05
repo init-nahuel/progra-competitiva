@@ -68,3 +68,8 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](./
 * [**¿Camino o trampa?:**](./enunciados/programacion_dinamica/camino_trampa.pdf) [**Solucion**](./ejercicios/programacion_dinamica/camino_trampa.cpp)
 * [**Entrenamiento Santiagino**](./enunciados/programacion_dinamica/entrenamiento_sgto.pdf) [**Solucion**](./ejercicios/programacion_dinamica/entrenamiento_stgo.cpp)
 * [**Sapo y Sepo: Travesia en el bosque**](./enunciados/programacion_dinamica/travesia_bosque.pdf) [**Solucion**](./ejercicios/programacion_dinamica/travesia_bosque.cpp)
+
+## Segment Trees
+
+- [**Consultas Dinamicas**](./enunciados/segment_trees/consultas_dinamicas.pdf): [**Solucion**](./ejercicios/segment-trees/consultas_dinamicas.cpp)
+- [**Caracteres Distintos**](./enunciados/segment_trees/caracteres_distintos.pdf): [**Solucion**](./ejercicios/segment-trees/caracteres_distintos.cpp)
