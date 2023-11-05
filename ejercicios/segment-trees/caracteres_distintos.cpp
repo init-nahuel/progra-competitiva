@@ -7,8 +7,7 @@ using namespace std;
 struct segment_tree{
 
   int N;
-  vector <string> tree;
-  string neutro = "";
+  vector <set<char>> tree;
   
   segment_tree(string &A){
     // constructor
@@ -17,15 +16,17 @@ struct segment_tree{
     build(0, 0, N-1, A);
   }
 
-  string merge(string a, string b){
-    return a + b;
+  set<char> merge(set<char> a, set<char> b){
+    set<char> res;
+    set_union(a.begin(), a.end(), b.begin(), b.end(), inserter(res, res.begin()));
+    return res;
   }
 
   void build(int n, int i, int j, string &A){
     // n: indice del nodo
     // nodo mira segmento [i,j]
     if(i == j){
-      tree[n] = A[i];
+      tree[n].insert(A[i]);
       return;
     }
     int mid = (i+j)/2;
@@ -36,11 +37,11 @@ struct segment_tree{
     tree[n] = merge(tree[2*n+1], tree[2*n+2]);
   }
 
-  string query(int l, int r){
+  set<char> query(int l, int r){
     return query(0, 0, N-1, l, r);
   }
 
-  string query(int n, int i, int j, int l, int r){
+  set<char> query(int n, int i, int j, int l, int r){
     // nodo actual mira intervalo [i,j]
     // queremos responder consulta [l,r]
     // caso 1: contenido totalmente
@@ -49,25 +50,25 @@ struct segment_tree{
     }
     // caso 2: [i,j] está fuera de [l,r]
     if(j < l || r < i){
-      return neutro;
+      return {};
     }
     // caso 3: contenido parcialmente
     int mid = (i+j)/2;
     return merge(query(2*n+1, i, mid, l, r),query(2*n+2, mid+1, j, l, r));
   }
 
-  void update(int idx, string &x){
+  void update(int idx, char x){
     // A[idx] = x
     update(0, 0, N-1, idx, x);
   }
 
-  void update(int n, int i, int j, int idx, string &x){
+  void update(int n, int i, int j, int idx, char x){
     // no contiene a idx
     if(idx < i || idx > j){
       return;
     }
     if(i == j){
-      tree[n] = x;
+      tree[n] = {x};
       return;
     }
     int mid = (i+j)/2;
@@ -90,14 +91,12 @@ int main() {
       int t;
       cin >> t;
       if (t == 1) {
-        int a; string b; cin >> a >> b;
+        int a; char b; cin >> a >> b;
         ST.update(a-1, b);
       } else {
         int a, b; cin >> a >> b;
-        string ans_str = ST.query(a-1, b-1);
-        sort(ans_str.begin(), ans_str.end());
-        int ans = unique(ans_str.begin(), ans_str.end()) - ans_str.begin();
-        cout << ans << endl;
+        set<char> ans = ST.query(a-1, b-1);
+        cout << ans.size() << endl;
       }
   }
 
