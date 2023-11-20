@@ -73,3 +73,7 @@ La editorial con hints para algunos de estos problemas se encuentra [**aca**](./
 
 - [**Consultas Dinamicas**](./enunciados/segment_trees/consultas_dinamicas.pdf): [**Solucion**](./ejercicios/segment-trees/consultas_dinamicas.cpp)
 - [**Caracteres Distintos**](./enunciados/segment_trees/caracteres_distintos.pdf): [**Solucion**](./ejercicios/segment-trees/caracteres_distintos.cpp)
+
+## Strings
+
+- [**Buscando Patrones**](./enunciados/strings/buscando_patrones.pdf): [**Solucion**](./ejercicios/strings/buscando_patrones.cpp)
